@@ -1,14 +1,14 @@
-cuerpo {
+body {
     margen: 60px auto;
     anchura: 70%;
 }
-nav ul, pie de página {ul
+nav ul, footer {ul
     font-family: 'Helvetica', 'Arial', 'Sans-serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
 }
-nav ul li, pie de página ul li {
+nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
@@ -28,7 +28,7 @@ pag {
     line-height: 1.4em;
     color: # 333;
 }
-pie de página {
+footer {
     border-top: 1px solid # d5d5d5;
     font-size: .8em;
 }
