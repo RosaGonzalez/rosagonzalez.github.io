@@ -28,6 +28,81 @@
         .works {
             text-align: left;
         }
+        
+        .move {
+            width: 100%;
+            height: 100%;
+            /*background-color: red;*/
+            position: relative;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-name: example;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-delay: 2s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-direction: alternate;
+            /* Standard syntax */
+            animation-name: example;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+        }
+        /* Safari 4.0 - 8.0 */
+        
+        @-webkit-keyframes example {
+            0% {
+                background-color: blue;
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                background-color: blue;
+                left: 200px;
+                top: 0px;
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+            }
+            75% {
+                background-color: green;
+                left: 200px;
+                top: 000px;
+            }
+            100% {
+                background-color: greenyellow;
+                left: 0px;
+                top: 0px;
+            }
+        }
+        /* Standard syntax */
+        
+        @keyframes example {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+            }
+            75% {
+                background-color: green;
+                left: 200px;
+                top: 000px;
+            }
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
     </style>
     <script>
     </script>
@@ -36,7 +111,7 @@
 
 <body>
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -64,22 +139,26 @@
             <!-- Left Column -->
             <div class="col-md-4">
                 <!--Card-->
-                <div class="card">
+                <div class="panel panel-primary" style="border-color: 2px rgb(85,142,213)">
                     <!--Card image-->
-                    <img class="img-fluid" src="img/pixie.jpg" class="img-responsive" style="width:100%" alt="avatar">
+                    <img class="img-fluid" src="img/fotoPerfil.jpg" class="img-responsive img-rounded" style="width:100%" alt="avatar">
                     <!--/.Card image-->
                     <!--Card content-->
                     <div class="card-block">
                         <!--Title-->
                         <h4 class="card-title">Rosa María González Pérez</h4>
+                        <hr>
                         <!--Text-->
                         <div class="container" style="text-align: left;">
-                            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Developer</p>
-                            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Madrid, Spain</p>
-                            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>gprosemary@gmail.com</p>
-                            <p><i class="fa fa-twitter-square fa-fw" aria-hidden="true"></i>@gprosemary</p>
-                            <p><i class="fa fa-github-square fa-fw" aria-hidden="true"></i>RosaGonzalez(Valshamr) </p>
-                            <hr>
+                            <h5>
+                                <p><i class="fa fa-briefcase fa-2x fa-fw" aria-hidden="true"></i>Developer</p>
+                                <p><i class="fa fa-home fa-2x fa-fw" aria-hidden="true"></i>Tres Cantos, Madrid, Spain</p>
+                                <hr>
+                                <p><i class="fa fa-envelope fa-2x fa-fw" aria-hidden="true"></i>gprosemary@gmail.com</p>
+                                <p><i class="fa fa-twitter-square fa-2x fa-fw" aria-hidden="true"></i>@gprosemary</p>
+                                <p><i class="fa fa-github-square fa-2x fa-fw" aria-hidden="true"></i>RosaGonzalez(Valshamr) </p>
+                                <br>
+                            </h5>
                         </div>
 
                     </div>
@@ -92,51 +171,104 @@
                 <!--panel WORKS-->
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3><i class="fa fa-briefcase fa-fw" aria-hidden="true"></i>Experiencia Laboral</h3>
+                        <h3 class="move"><i class="fa fa-briefcase fa-fw" aria-hidden="true"></i>Experiencia Laboral</h3>
                     </div>
                     <div class="panel-body">
-                        <div class="works">
-                            <h4 style="color: green">Developer</h4>
+
+                        <div class="works col-md-6">
                             <p style="color: green"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>Junio 2017 - Junio 2017</p>
+                            <h4 style="color: green">Developer</h4>
                             <p>
                                 <h5>Alebat Management Consulting</h5>
-                                Prácticas MEAN
+                                <p>Tecnologías utilizadas: HTML5, CSS3, PHP, Javascript, MySQL, XAMP, TOMCAT, SVN.</p>
                             </p>
+                            <hr>
                         </div>
-                        <hr>
-                        <div class="works">
+
+                        <div class="works col-md-6">
+                            <p style="color: green"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>Sept 2016 - Nov 2016</p>
                             <h4 style="color: green">Developer</h4>
-                            <p style="color: green"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>Junio 2017 - Junio 2017</p>
                             <p>
-                                <h5>Alebat Management Consulting</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.
+                                <h5>Aselcis Consulting, S.L.</h5>
+                                <p>Prácticas Desarrollo ERP Odoo.<br> Tecnologías utilizadas: HTML5, Phyton, javascript.
                                 </p>
                             </p>
+                            <hr>
                         </div>
-                        <hr>
-                        <div class="works">
-                            <h4 style="color: green">Developer</h4>
-                            <p style="color: green"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>Junio 2017 - Junio 2017</p>
+
+                        <div class="works col-md-6">
+                            <p style="color: green"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>oct 2008 - abr 2014</p>
+                            <h4 style="color: green">Responsable Administración Técnica</h4>
                             <p>
-                                <h5>Alebat Management Consulting</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.
-                                </p>
+                                <h5>MARZING, S.A</h5>
                             </p>
+                            <hr>
                         </div>
                         <hr>
-                        <div class="works">
-                            <h4 style="color: green">Developer</h4>
-                            <p style="color: green"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>Junio 2017 - Junio 2017</p>
+                        <div class="works col-md-6">
+                            <p style="color: green"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>abr 1999 - oct 2008</p>
+                            <h4 style="color: green">Administración y Reporting Financiero.</h4>
                             <p>
-                                <h5>Alebat Management Consulting</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.
-                                </p>
+                                <h5>ADT Servicios Seguridad, S.A.</h5>
                             </p>
+                            <hr>
+                        </div>
+                        <!-- -->
+                        <hr>
+                        <div class="works col-md-6">
+                            <p style="color: green"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>abr 1998 - abr 1999</p>
+                            <h4 style="color: green">Administrativo
+                            </h4>
+                            <p>
+                                <h5>ADT-PROSEGUR, S.L.</h5>
+                            </p>
+                            <hr>
+                        </div>
+
+                        <div class="works col-md-6">
+                            <p style="color: green"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>nov 1996 - abr 1998</p>
+                            <h4 style="color: green">Telemarketing, Call Center</h4>
+                            <p>
+                                <h5>Telefónica Moviles, S.A.</h5>
+                            </p>
+                            <hr>
                         </div>
                         <hr>
+                        <div class="works col-md-6">
+                            <p style="color: green"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>abr 1991 - sept 1995</p>
+                            <h4 style="color: green">Oficial Administrativo</h4>
+                            <p>
+                                <h5>TELVENT TRAFICO Y TRANSPORTE, S.A.</h5>
+                            </p>
+                            <hr>
+                        </div>
+
+
+                        <!-- -->
+
+                        <div class="works col-md-6">
+                            <p style="color: green"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>jul 1990 - ene 1991</p>
+                            <h4 style="color: green">Comercial
+                            </h4>
+                            <p>
+                                <h5>Prausa, Inmobiliaria
+                                </h5>
+                            </p>
+                            <hr>
+                        </div>
+
+                        <!-- -->
+                        <hr>
+                        <div class="works col-md-6">
+                            <p style="color: green"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>oct 1987 - abr 1988</p>
+                            <h4 style="color: green">Administrativo Contable
+                            </h4>
+                            <p>
+                                <h5>Centro de Estudios Financieros, S.A.</h5>
+                            </p>
+                            <hr>
+                        </div>
+                        <!-- -->
                     </div>
                 </div>
             </div>
@@ -144,19 +276,227 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <div class="card">/</div>
-            </div>
-            <div class="col-md-8">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3><i class="fa fa-asterisk fa-fw" aria-hidden="true"></i>Skills</h3>
+                        <h3><i class="fa fa-graduation-cap" aria-hidden="true"></i> Estudios Oficiales</h3>
                     </div>
                     <div class="panel-body">
+                        <div class="works col-md-12">
+                            <p style="color: blue"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>Sept 2014 - Jun 2017</p>
+                            <h4 style="color: blue">Grado Superior
+                                <BR>Desarrollo Aplicaciones Web</h4>
+                            <p>
+                                <h5>I.E.S. Ciudad Escolar </h5>
+                            </p>
+                            <hr>
+                        </div>
+                        <!-- -->
+                        <div class="works col-md-12">
+                            <p style="color: blue"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>Sept 2011 - Jul 2014</p>
+                            <h4 style="color: blue">Grado
+                                <BR>Administracción y Dirección de Empresa</h4>
+                            <p>
+                                <h5>UDIMA </h5>
+                            </p>
+                            <hr>
+                        </div>
+                        <!-- -->
+                        <div class="works col-md-12">
+                            <p style="color: blue"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i>Sept 1985 - Jun 1991</p>
+                            <h4 style="color: blue">Grado Superior
+                                <BR>Administracción Comercial</h4>
+                            <p>
+                                <h5>I.E.S. Ciudad Escolar </h5>
+                            </p>
+                            <hr>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- SKILLS -->
+            <div class="col-md-8">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3><i class="fa fa-cog fa-fw" aria-hidden="true"></i>Skills</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- grupo1 -->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">MARCAS</div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-4" style="text-align: left"> HTML5</div>
+                                            <div class="row col-md-8">
+                                                <div class="skill1 col-md-1" style="background-color: rgb(220,230,242); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill2 col-md-1" style="background-color: rgb(198,217,241); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill3 col-md-1" style="background-color: rgb(142,180,227); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill4 col-md-1" style="background-color: rgb(85,142,213); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill5 col-md-1" style="background-color: rgb(0,112,192); font-family: wingdings; font-weight: bolder">&nbsp; </div>
+                                            </div>
+                                        </div>
+                                        <!-- -->
+                                        <div class="row">
+                                            <div class="col-md-4" style="text-align: left"> CSS3</div>
+                                            <div class="row col-md-8">
+                                                <div class="skill1 col-md-1" style="background-color: rgb(220,230,242); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill2 col-md-1" style="background-color: rgb(198,217,241); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill3 col-md-1" style="background-color: rgb(142,180,227); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill4 col-md-1" style="background-color: rgb(85,142,213); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill5 col-md-1" style="background-color: rgb(0,112,192); font-family: wingdings; font-weight: bolder">&nbsp; </div>
+                                            </div>
+                                        </div>
+                                        <!-- -->
+                                    </div>
+                                    <!-- div final panel-body -->
+                                </div>
+                            </div>
+                            <!-- div panel info1 -->
+
+                            <!-- grupo2 -->
+
+                            <div class="col-md-6">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">Bases de Datos</div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-4" style="text-align: left"> HTML5</div>
+                                            <div class="row col-md-8">
+                                                <div class="skill1 col-md-1" style="background-color: rgb(220,230,242); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill2 col-md-1" style="background-color: rgb(198,217,241); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill3 col-md-1" style="background-color: rgb(142,180,227); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill4 col-md-1" style="background-color: rgb(85,142,213); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill5 col-md-1" style="background-color: rgb(0,112,192); font-family: wingdings; font-weight: bolder">&nbsp; </div>
+                                            </div>
+                                        </div>
+                                        <!-- -->
+                                        <div class="row">
+                                            <div class="col-md-4" style="text-align: left"> CSS3</div>
+                                            <div class="row col-md-8">
+                                                <div class="skill1 col-md-1" style="background-color: rgb(220,230,242); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill2 col-md-1" style="background-color: rgb(198,217,241); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill3 col-md-1" style="background-color: rgb(142,180,227); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill4 col-md-1" style="background-color: rgb(85,142,213); font-family: wingdings; font-weight: bolder">ü</div>
+                                                <div class="skill5 col-md-1" style="background-color: rgb(0,112,192); font-family: wingdings; font-weight: bolder">&nbsp; </div>
+                                            </div>
+                                        </div>
+                                        <!-- -->
+                                    </div>
+                                    <!-- div final panel-body -->
+                                </div>
+                                <!-- div panel info2 -->
+                            </div>
+                        </div>
+                        <!-- grupo3 -->
+                        <div class="panel panel-info">
+                            <div class="panel-heading">Lenguajes de Programación</div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-8" style="text-align: left"> HTML5</div>
+                                    <div class="row col-md-4">
+                                        <div class="skill1 col-md-1" style="background-color: rgb(220,230,242); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill2 col-md-1" style="background-color: rgb(198,217,241); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill3 col-md-1" style="background-color: rgb(142,180,227); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill4 col-md-1" style="background-color: rgb(85,142,213); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill5 col-md-1" style="background-color: rgb(0,112,192); font-family: wingdings; font-weight: bolder">&nbsp; </div>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="row">
+                                    <div class="col-md-8" style="text-align: left"> CSS3</div>
+                                    <div class="row col-md-4">
+                                        <div class="skill1 col-md-1" style="background-color: rgb(220,230,242); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill2 col-md-1" style="background-color: rgb(198,217,241); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill3 col-md-1" style="background-color: rgb(142,180,227); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill4 col-md-1" style="background-color: rgb(85,142,213); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill5 col-md-1" style="background-color: rgb(0,112,192); font-family: wingdings; font-weight: bolder">&nbsp; </div>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="row">
+                                    <div class="col-md-8" style="text-align: left"> HTML5</div>
+                                    <div class="row col-md-4">
+                                        <div class="skill1 col-md-1" style="background-color: rgb(220,230,242); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill2 col-md-1" style="background-color: rgb(198,217,241); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill3 col-md-1" style="background-color: rgb(142,180,227); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill4 col-md-1" style="background-color: rgb(85,142,213); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill5 col-md-1" style="background-color: rgb(0,112,192); font-family: wingdings; font-weight: bolder">&nbsp; </div>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="row">
+                                    <div class="col-md-8" style="text-align: left"> CSS3</div>
+                                    <div class="row col-md-4">
+                                        <div class="skill1 col-md-1" style="background-color: rgb(220,230,242); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill2 col-md-1" style="background-color: rgb(198,217,241); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill3 col-md-1" style="background-color: rgb(142,180,227); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill4 col-md-1" style="background-color: rgb(85,142,213); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill5 col-md-1" style="background-color: rgb(0,112,192); font-family: wingdings; font-weight: bolder">&nbsp; </div>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="row">
+                                    <div class="col-md-8" style="text-align: left"> HTML5</div>
+                                    <div class="row col-md-4">
+                                        <div class="skill1 col-md-1" style="background-color: rgb(220,230,242); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill2 col-md-1" style="background-color: rgb(198,217,241); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill3 col-md-1" style="background-color: rgb(142,180,227); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill4 col-md-1" style="background-color: rgb(85,142,213); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill5 col-md-1" style="background-color: rgb(0,112,192); font-family: wingdings; font-weight: bolder">&nbsp; </div>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="row">
+                                    <div class="col-md-8" style="text-align: left"> CSS3</div>
+                                    <div class="row col-md-4">
+                                        <div class="skill1 col-md-1" style="background-color: rgb(220,230,242); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill2 col-md-1" style="background-color: rgb(198,217,241); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill3 col-md-1" style="background-color: rgb(142,180,227); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill4 col-md-1" style="background-color: rgb(85,142,213); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill5 col-md-1" style="background-color: rgb(0,112,192); font-family: wingdings; font-weight: bolder">&nbsp; </div>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="row">
+                                    <div class="col-md-8" style="text-align: left"> HTML5</div>
+                                    <div class="row col-md-4">
+                                        <div class="skill1 col-md-1" style="background-color: rgb(220,230,242); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill2 col-md-1" style="background-color: rgb(198,217,241); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill3 col-md-1" style="background-color: rgb(142,180,227); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill4 col-md-1" style="background-color: rgb(85,142,213); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill5 col-md-1" style="background-color: rgb(0,112,192); font-family: wingdings; font-weight: bolder">&nbsp; </div>
+                                    </div>
+                                </div>
+                                <!-- -->
+                                <div class="row">
+                                    <div class="col-md-8" style="text-align: left"> CSS3</div>
+                                    <div class="row col-md-4">
+                                        <div class="skill1 col-md-1" style="background-color: rgb(220,230,242); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill2 col-md-1" style="background-color: rgb(198,217,241); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill3 col-md-1" style="background-color: rgb(142,180,227); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill4 col-md-1" style="background-color: rgb(85,142,213); font-family: wingdings; font-weight: bolder">ü</div>
+                                        <div class="skill5 col-md-1" style="background-color: rgb(0,112,192); font-family: wingdings; font-weight: bolder">&nbsp; </div>
+                                    </div>
+                                </div>
+                                <!-- -->
+                            </div>
+                            <!-- div final panel-body -->
+                        </div>
+                        <!-- div panel info1 -->
+
+
+
+
+
+                    </div>
+                    <!-- fin panel body - SKILLS -->
+                </div>
+            </div>
+            <!-- FIN SKILL -->
         </div>
-        <!-- fin contenedor -->
+    </div>
+    <!-- fin contenedor -->
 
 
     </div>
