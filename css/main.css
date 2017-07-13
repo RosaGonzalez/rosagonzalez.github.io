@@ -6,8 +6,10 @@
         /* Remove the navbar's default margin-bottom and rounded borders */
         
         .navbar {
-            margin-bottom: 0;
+            margin-bottom: 5px;
             border-radius: 0;
+            box-shadow: 10px 10px 5px grey;
+            background-color: #e3e3e3;
         }
         /* Add a gray background color and some padding to the footer */
         
